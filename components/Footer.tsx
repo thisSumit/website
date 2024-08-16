@@ -16,7 +16,7 @@ export async function Footer() {
       <div className="space-y-1">
         <h4 className="text-[16px] font-medium leading-none">IT Services and Teaching Platform</h4>
         <p className="text-[16px] text-muted-foreground">
-          The Leading Virtual Service and Intership Platform
+          The Leading Virtual Service and Internship Platform
         </p>
       </div>
       <Separator className="my-4" />
