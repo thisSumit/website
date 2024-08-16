@@ -30,7 +30,7 @@ export async function Footer() {
       <div className="flex gap-5 grayscale items-center mt-5">
         <a href="https://www.instagram.com/internpro.tech/"><img src="/instagram.png" className="w-[28px]" alt="" /></a>
         <a href="https://www.linkedin.com/company/gointernpro/"><img src="/linkedin.png" className="w-[28px]" alt="" /></a>
-        <a href="mailto:internpro038@gmail.com"><img src="/gmail.png" className="w-[28px]" alt="" /></a>
+        <a href="mailto:connect@internpro.tech"><img src="/gmail.png" className="w-[28px]" alt="" /></a>
       </div>
     </div>
         </div>
