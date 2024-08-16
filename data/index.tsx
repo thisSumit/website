@@ -1,7 +1,7 @@
 export const navItems = [
     { name: "Achievements", link: "#achieve"},
     { name: "What We Do?", link: "#what"},
-    { name: "Interships & Projects", link: "#internships"},
+    { name: "Internships & Projects", link: "#internships"},
     { name: "Join Our Family", link: "https://docs.google.com/forms/d/e/1FAIpQLSez4WUhG__Biy7ldYhc8Dzke9pqoQ92KVBH--aHxMzTV4mPmA/viewform"},
     { name: "Verify", link: "verify"},
   ];
