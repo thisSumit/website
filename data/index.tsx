@@ -6,7 +6,7 @@ export const navItems = [
     { name: "Verify", link: "verify"},
   ];
 
-  export const reviews = [
+  export const reviews = [ 
     {
       name: "Madhav",
       photo: "https://upload.wikimedia.org/wikipedia/commons/4/47/Microsoft_logo_%281982%29.svg",
