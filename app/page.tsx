@@ -3,6 +3,7 @@ import { Bento } from "@/components/Bento";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import Special from "@/components/Special";
+import { ModeToggle } from "@/components/Toggle";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { MarqueeDemo } from "@/components/WeDo";
 import { navItems } from "@/data";
@@ -18,6 +19,7 @@ export default function Home() {
         <Bento/>
         <Special/>
         <Footer/>
+      <ModeToggle/>
       </div>
     </main>
     

@@ -9,6 +9,7 @@ import {
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 export const FloatingNav = ({
   navItems,
@@ -24,6 +25,11 @@ export const FloatingNav = ({
   const { scrollYProgress } = useScroll();
 
   const [visible, setVisible] = useState(true);
+
+  
+  const { theme } = useTheme();
+    const logoSrc = theme === 'light' ? 'logo.svg' : 'white-logo.svg';
+    const colorSrc = theme === 'light' ? 'rgba(255, 255, 255, 0.50)' : 'rgba(17, 25, 40, 0.75)';
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
@@ -57,11 +63,19 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          "flex max-w-fit fixed top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2  items-center justify-center space-x-4",
+          // change rounded-full to rounded-lg
+          // remove dark:border-white/[0.2] dark:bg-black bg-white border-transparent
+          // change  pr-2 pl-8 py-2 to px-10 py-5
+          "flex max-w-fit md:min-w-[70vw] lg:min-w-fit fixed z-[5000] top-10 inset-x-0 mx-auto px-10 py-3 rounded-full border border-black/.1 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] items-center justify-center space-x-4",
           className
         )}
+        style={{
+          backdropFilter: "blur(16px) saturate(180%)",
+          backgroundColor: `${colorSrc}`,
+          border: "1px solid rgba(255, 255, 255, 0.125)",
+        }}
       >
-        <a href="/"><Image alt="logo" src='logo.svg' width={100} height={50} className="items-center justify-center"></Image></a>
+        <a href="/"><Image alt="logo" src={logoSrc} width={120} height={60} className="items-center justify-center"></Image></a>
         {navItems.map((navItem: any, idx: number) => (
           <Link
             key={`link=${idx}`}
@@ -74,8 +88,8 @@ export const FloatingNav = ({
             <span className="hidden sm:block text-sm">{navItem.name}</span>
           </Link>
         ))}
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSez4WUhG__Biy7ldYhc8Dzke9pqoQ92KVBH--aHxMzTV4mPmA/viewform" className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] bg-yellow-300 text-black dark:text-white px-4 py-2 rounded-full">
-          <span>Join Now</span>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSez4WUhG__Biy7ldYhc8Dzke9pqoQ92KVBH--aHxMzTV4mPmA/viewform" className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] bg-yellow-300 dark:text-black light:text-white px-4 py-2 rounded-full">
+          <span className=" text-nowrap">Join Now</span>
           <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
         </a>
       </motion.div>

@@ -8,8 +8,8 @@ const Special = () => {
                 <h1 className='font-bold text-4xl md:text-6xl tracking-tighter items-center flex'>Earn Side Income By Become a Captain</h1>
                 <p className='text-xl text-muted-foreground mt-1 mb-4 md:my-4'>At InternPro, we believe in the power of community and networking. That&apos;s why we&apos;ve introduced our Referral Program, where you can earn extra income simply by spreading the word about InternPro&apos;s internship and project opportunities.</p>
                 <div className='flex gap-5 md:justify-end mr-20 text-nowrap'>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSez4WUhG__Biy7ldYhc8Dzke9pqoQ92KVBH--aHxMzTV4mPmA/viewform" className='px-4 py-2 text-sm md:text-xl bg-yellow-300 rounded-full text-black'>Be a Captain</a>
-                    <a href="/" className='px-4 py-2 text-sm md:text-xl border-[1px] border-white rounded-full'>Learn More</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSez4WUhG__Biy7ldYhc8Dzke9pqoQ92KVBH--aHxMzTV4mPmA/viewform" className='font-semibold px-4 py-2 text-sm md:text-xl bg-yellow-300 rounded-full text-black'>Be a Captain</a>
+                    <a href="/learn" className='font-semibold px-4 py-2 text-sm md:text-xl border-[1px] border-white rounded-full'>Learn More</a>
                 </div>
                 </div>
                 <div className='md:w-1/4 w-full'>

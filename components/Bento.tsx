@@ -15,9 +15,9 @@ import { items } from "@/data";
 
 export function Bento() {
   return (
-    <div id="internships" className="p-10">
+    <div id="internships" className="md:px-10">
       <h1 className='font-bold text-3xl md:text-4xl tracking-tighter items-center flex'>Explore Our Categories</h1>
-      <p className='text-lg text-muted-foreground  mb-4 md:my-4'>We envision a future where every student and aspiring professional has the opportunity to gain meaningful experience before they even graduate. By fostering strong partnerships with industry leaders, we aim to become the go-to platform for internships and project-based learning.</p>
+      <p className='text-lg text-muted-foreground  mb-4 md:my-4 md:w-3/4 w-full'>We envision a future where every student and aspiring professional has the opportunity to gain meaningful experience before they even graduate. By fostering strong partnerships with industry leaders, we aim to become the go-to platform for internships and project-based learning.</p>
       <BentoGrid className="max-w-full">
       {items.map((item, i) => (
         <BentoGridItem

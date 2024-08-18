@@ -59,33 +59,32 @@ export const BentoGridItem = ({
       )}
       style={{
         background: "rgb(4,7,29)",
-        backgroundColor:
-          "white",
+        backgroundColor: "white",
       }}
     >
       <div>
+      <a href={link}>
         <div className="flex w-full h-full absolute justify-end">
           {img && (
             <img
               src={img}
               alt={img}
-              className={cn(imgClassName, "object-cover object-center items-center justify-center blur-[1px]")}
+              className={cn(imgClassName, "object-cover object-center items-center justify-center")}
             />
           )}
         </div>
         <div
-          className={`absolute right-0 md:-bottom-16 -bottom-5 hover:blur-sm transition:200ms brightness-95 -rotate-12`}
+          className={`absolute right-0 md:-bottom-16 -bottom-5 brightness-95  -rotate-12`}
         >
           {spareImg && (
             <img
               src={spareImg}
               alt={spareImg}
-              className="object-cover object-center h-full right-0 md:w-[25vh] w-[12vh]"
+              className="object-cover object-center group-hover/bento:blur-xl transition duration-200 h-full right-0 md:w-[30vh] hover:blur-xl w-[12vh]"
             />
           )}
         </div>
 
-        <a href={link}>
           <div
             className={cn(
               titleClassName,
